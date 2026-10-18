@@ -9,7 +9,7 @@
 - 장면별 BGM 6곡, 음악·효과음 설정 저장
 - PC·태블릿·모바일 대응
 
-소스는 이 비공개 GitHub 저장소에 보관하고, 게임 서비스는 별도 Sites 호스팅에 배포합니다.
-게임 주소: https://ruler-island-kkankong32.expertdream10.chatgpt.site
-Sites 프로젝트: appgprj_6ad4a7118d30819194291a5c246c6c4c
+이 공개 GitHub 저장소의 main 브랜치에서 GitHub Pages로 자동 배포합니다.
+게임 주소: https://kkankong32-alt.github.io/ruler-island/
 음악은 첫 클릭 이후 시작합니다.
+
