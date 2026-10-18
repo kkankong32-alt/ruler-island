@@ -1,0 +1,143 @@
+.fraction{display:inline-flex;flex-direction:column;align-items:stretch;text-align:center;vertical-align:middle;font-size:.85em;line-height:1.08;margin:0 .2em;min-width:1em}.fraction>span{padding:.06em .12em}.fraction>span+span{border-top:2px solid currentColor}.fraction:focus-visible{outline:2px solid #168eae}
+#voyage{position:absolute;inset:0;background:#123b4d;display:flex;align-items:center;justify-content:center;z-index:10}#voyage[hidden]{display:none}.voyage-art{position:relative;width:min(100%,177.68vh);aspect-ratio:1672/941;container-type:inline-size}.voyage-art picture,.voyage-art img{display:block;width:100%;height:100%}.voyage-art button{cursor:pointer}.map-hit,.mode-hit,#map-confirm{position:absolute;background:transparent;border:3px solid transparent;box-shadow:none;padding:0;border-radius:12px}.map-hit[aria-pressed=true],.mode-hit[aria-pressed=true]{border-color:#fff4af;box-shadow:0 0 15px #ffe695,inset 0 0 12px #ffe69566}.map-hit:focus-visible,.mode-hit:focus-visible,#map-confirm:focus-visible{outline:4px solid white;outline-offset:2px}.map-hit{top:16%;width:19.6%;height:46.5%}.map-hit-0{left:8.1%}.map-hit-1{left:29.5%}.map-hit-2{left:51%}.map-hit-3{left:72.2%}.seal{position:absolute;right:6%;top:3%;color:#ffe28a;font-size:3cqw;text-shadow:0 2px 5px #173f4e}.mode-hit{top:84.8%;height:8%;width:17.3%}.mode-hit-0{left:20.7%}.mode-hit-1{left:41.7%}.mode-hit-2{left:62.4%}#map-confirm{left:86%;top:78%;width:10%;height:18%}.voyage-details{position:absolute;left:17%;top:66%;width:66%;height:15%;display:flex;align-items:center;justify-content:space-evenly;flex-direction:column;color:#173f4e;font-size:1.15cqw;line-height:1.2}.voyage-details nav,.voyage-status{display:flex;align-items:center;justify-content:center;gap:1cqw}.voyage-details button,.voyage-details select{font:inherit;padding:.2em .6em;color:#173f4e;background:#fff3ce;border:1px solid #9c7840;border-radius:5px}.voyage-details button[aria-pressed=true]{background:#174e5b;color:#fff3ce}.voyage-details strong{font-size:1.5cqw}.voyage-utility{position:absolute;top:5%;font-size:1.2cqw;padding:.5em;background:#133f50e8;color:#fff2ce;border:1px solid #dfba70;border-radius:7px}#voyage-back{left:3%}#voyage-records{right:3%}#equation:has(.fraction){line-height:1.1;font-size:1.5cqw}#instruments:has(.fraction){overflow:visible}#dialog .fraction{font-size:1em}
+@media(orientation:portrait){.voyage-art{width:min(100%,56.28vh);aspect-ratio:941/1672}.map-hit{width:43%;height:19.5%;top:15%}.map-hit-0,.map-hit-2{left:5%}.map-hit-1,.map-hit-3{left:52%}.map-hit-2,.map-hit-3{top:37%}.mode-hit{top:79%;height:6%;width:30%}.mode-hit-0{left:3%}.mode-hit-1{left:35%}.mode-hit-2{left:67%}#map-confirm{left:12%;top:87%;width:76%;height:8%}.voyage-details{left:8%;top:63.5%;width:84%;height:12%;font-size:3cqw}.voyage-details strong{font-size:3.2cqw}.voyage-details nav,.voyage-status{gap:1cqw}.voyage-details button,.voyage-details select{padding:.25em .35em}.voyage-utility{top:1%;font-size:3cqw}.seal{font-size:7cqw}#equation:has(.fraction){font-size:20px}}
+@media(max-width:1100px) and (orientation:landscape){#equation:has(.fraction){font-size:19px}}
+#choices .die-caption{display:flex;align-items:center;justify-content:center;font-weight:800;color:#173747;font-size:1.6cqw;white-space:nowrap;line-height:1.1}#choices{pointer-events:none}@media(max-width:1100px){#choices .die-caption{font-size:18px}}#voyage select[hidden]{display:none}
+.ending{display:flex;align-items:center;gap:20px;border-radius:18px;background:linear-gradient(130deg,#123d51,#217679);padding:16px;color:#fff0c8}.ending>img{height:180px;width:130px;object-fit:contain}.ending strong{font-size:24px}.ending p{margin:10px 0}.ending-seals{display:flex;gap:12px}.ending-seals>span{display:flex;flex-direction:column;align-items:center;font-size:30px;opacity:.35}.ending-seals>span.earned{opacity:1;color:#ffe39a}.ending-seals small{font-size:13px}.golden-ending{background:linear-gradient(120deg,#12334b,#71552f);border:2px solid #d9b768;box-shadow:inset 0 0 28px #ffdb8066}.golden-ending strong{color:#ffe39a}@media(max-width:500px){.ending{gap:8px;padding:10px}.ending>img{width:80px;height:140px}.ending strong{font-size:18px}.ending p{font-size:13px}.ending-seals{gap:6px}.ending-seals small{font-size:11px}}
+@media(orientation:portrait){.voyage-details{font-size:3.4cqw}.voyage-details strong{font-size:3.6cqw}}
+@media(orientation:landscape) and (min-width:900px) and (max-width:1100px){.voyage-details{font-size:1.4cqw}.voyage-details strong{font-size:1.7cqw}}
+#problem-prompt .fraction{font-size:max(1em,15px)}#hint .fraction{font-size:max(1em,16px)}
+@media(orientation:landscape) and (max-width:1100px){#game[data-problem="fraction"] #instruments,#game[data-problem="relation"] #instruments{top:52%!important}#game[data-problem="fraction"] #keypad,#game[data-problem="relation"] #keypad{height:49%}}
+.ending-avatar{width:180px;height:180px;flex-shrink:0;background-size:400% 300%;background-position:66.6667% 100%;animation:celebrate-in .7s ease-out}.ending-seals .earned{animation:seal-in 1s ease-out}@keyframes celebrate-in{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}@keyframes seal-in{from{transform:scale(.6);filter:brightness(3)}to{transform:scale(1);filter:brightness(1)}}@media(max-width:500px){.ending-avatar{width:100px;height:130px;background-size:400% 300%}}@media(prefers-reduced-motion:reduce){.ending-avatar,.ending-seals .earned{animation:none}}
+@media(max-width:500px){.ending-avatar{width:100px;height:100px}}
+#choices .die-caption{flex:1;min-width:0;height:100%}@media(max-width:1100px){#choices .die-caption{font-size:14px;background:#fff0cc;border:2px solid #b89658;border-radius:8px}}
+/* Text safety pass: fixed copy is raster artwork; live copy owns opaque panels. */
+.voyage-details{top:65.7%;height:15.2%;justify-content:space-between;gap:4px;background:#fff0d2;font-size:1.2cqw}
+.voyage-details nav{height:25%;flex-shrink:0;gap:12px}.voyage-details nav .art-label{width:9cqw;height:100%;padding:0;border:2px solid transparent;background:none;box-shadow:none;border-radius:5px}
+.art-label img,.fixed-label-art{display:block;width:100%;height:100%;object-fit:fill}.voyage-details nav .art-label[aria-pressed=true]{border-color:#15566a;box-shadow:0 0 0 2px #15566a}
+#map-learning{display:block;height:45%;width:75%;flex-shrink:0}#map-learning img{width:100%;height:100%;object-fit:contain;display:block}#map-description:empty{display:none}#map-description{font-size:14px;line-height:1}.voyage-status{height:26%;flex-shrink:0}.voyage-status button,.voyage-status select{font-size:inherit;background:#fff8e8;border:1px solid #8a6a39;color:#173d4c;padding:3px 8px}.voyage-status button:disabled{opacity:1;color:#665b49;background:#eee3cc}
+.voyage-utility.art-label{width:9cqw;height:2.8cqw;padding:0;border:0;background:none}
+#select-turn,#cast-bio{background:#123747!important;color:#fff5db!important;border:2px solid #d9bd7e!important;border-radius:8px;padding:6px 10px!important;text-shadow:none;box-sizing:border-box;line-height:1.35}
+#cast-cards .cast-card b{background:#fff0d2;border-radius:6px;overflow:hidden}#cast-cards .cast-card b .cast-name-art{position:static;width:100%;height:100%;object-fit:contain;filter:none}#cast-confirm{padding:0!important;border:0!important}#cast-confirm::after{content:none!important}
+#notice{background:#123747;color:#fff5db;text-shadow:none;border-radius:7px}#instruments{background:#fff0d2!important;color:#173747!important;box-shadow:none}#hint{background:#fff0d2!important;color:#173747!important;text-shadow:none;border:2px solid #a5824c;line-height:1.55;padding:12px}#hint:empty{display:none}#tutor{padding:0!important;width:72px!important;height:32px!important;border:0!important;background:none!important;box-shadow:none!important}
+dialog{background:#163a4c;color:#fff5db}dialog p,dialog dd{word-break:keep-all}dialog .close{float:none;position:absolute;right:12px;top:10px}dialog:has(.close) h2{padding-right:54px}dialog h2{line-height:1.45}dialog button{min-height:44px}.ending{background:#194654}.golden-ending{background:#435044}.ending-seals>span{opacity:1;color:#a6b3b4}.ending-seals small{font-size:14px}#hud .player-info small{line-height:1.5}
+@media(orientation:portrait){.voyage-details{left:9%;width:82%;top:64%;height:11.7%;font-size:3.4cqw;gap:3px}.voyage-details nav{height:25%;gap:5px}.voyage-details nav .art-label{width:24cqw}.voyage-utility.art-label{width:22cqw;height:6cqw}#map-learning{height:45%;width:100%}.voyage-status{gap:4px;height:25%}.voyage-status button,.voyage-status select{padding:1px 3px;font-size:3.1cqw}#select-turn,#cast-bio{font-size:3.3cqw}#hint{font-size:14px;padding:10px}#hud .player-info small{font-size:12px}.ending-seals small{font-size:12px}}
+@media(orientation:landscape) and (max-width:1100px){.voyage-details{font-size:1.35cqw}#hint{font-size:13px;padding:8px}#hud .player-info small{font-size:11px}}
+@media(orientation:portrait){.voyage-details{top:63.4%;height:13.5%}.voyage-details nav{height:25%}#map-learning{height:44%}.voyage-status{height:23%}.voyage-utility.art-label{height:6.5cqw}}
+dialog dt{color:#ffe0a1;line-height:1.5}#cast-back{background:#123747;color:#fff5db}
+/* Imagegen typography: no DOM text painted over fixed artwork. */
+#voyage{overflow:auto;background:radial-gradient(ellipse at top,#23606a,#092c3a 80%);align-items:center}
+.voyage-generated{width:100%;max-width:1560px;box-sizing:border-box;padding:20px 36px;display:flex;flex-direction:column;gap:20px;margin:auto}
+.voyage-generated header{display:flex;justify-content:space-between;align-items:center}
+.voyage-generated .generated-button{position:relative!important;inset:auto!important;width:auto!important;height:auto!important;padding:0!important;border:0;background:transparent;box-shadow:none;border-radius:12px;min-width:0;cursor:pointer}
+.generated-button img{display:block;width:100%;height:auto;pointer-events:none;border-radius:12px}
+.voyage-generated header .generated-button{width:190px!important}
+.generated-maps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.generated-map{position:relative;padding:0;border:3px solid transparent;border-radius:16px;background:transparent;min-width:0;cursor:pointer}
+.generated-map>img{display:block;width:100%;height:auto;border-radius:12px}
+.generated-map[aria-pressed=true],.generated-button[aria-pressed=true]{outline:3px solid #fff3a1;outline-offset:3px;filter:brightness(1.08)}
+.generated-map:focus-visible,.generated-button:focus-visible{outline:4px solid white;outline-offset:4px}
+.generated-map .seal{font-size:32px;right:8%;top:6%}
+.generated-options{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:4px 0}
+.generated-options nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.voyage-generated footer{display:flex;align-items:center;justify-content:flex-end;gap:24px}
+.voyage-generated footer .generated-button{width:190px!important}
+.voyage-generated #map-confirm{width:240px!important}
+.voyage-live{margin-right:auto;color:#fff2cf;font-size:22px;display:flex;gap:16px;align-items:center;white-space:nowrap}
+.voyage-generated .generated-button:disabled{filter:grayscale(1);opacity:.55;cursor:not-allowed}
+.voyage-generated [hidden]{display:none!important}
+.generated-control{padding:0!important;background:none!important;border:0!important}
+.generated-control img,#roll img{display:block;width:100%;height:100%;object-fit:contain}
+#roll:has(img){padding:0!important;background:none!important;border:0!important}
+@media(orientation:portrait){.voyage-generated{padding:14px;gap:18px;max-width:700px}.voyage-generated header .generated-button{width:132px!important}.generated-maps{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.generated-options{grid-template-columns:1fr;gap:14px;margin:0}.generated-options nav{gap:10px}.voyage-generated footer{display:grid;grid-template-columns:1fr 1fr;gap:10px}.voyage-live{font-size:16px;justify-content:center;white-space:normal}.voyage-generated footer .generated-button,.voyage-generated #map-confirm{width:100%!important}.generated-map .seal{font-size:24px}}
+@media(orientation:landscape) and (max-height:650px){.voyage-generated{padding:10px 24px;gap:12px;max-width:950px}.voyage-generated header .generated-button{width:120px!important}.generated-maps{gap:12px;max-width:720px;width:100%;margin:auto}.generated-options{gap:24px;max-width:760px;width:100%;margin:auto}.voyage-generated footer .generated-button{width:130px!important}.voyage-generated #map-confirm{width:150px!important}.voyage-live{font-size:16px}.voyage-generated footer{gap:16px}}
+@media(orientation:portrait){.voyage-generated{max-width:min(700px,48vh)}}
+.generated-help{display:block;width:100%;height:auto}dialog:has(.generated-help){width:min(680px,94vw);padding:52px 12px 12px;box-sizing:border-box;max-height:94vh}
+.dialog-art-label{padding:0!important;background:none!important;border:0!important;width:210px;max-width:100%;height:90px}
+.dialog-art-label img{display:block;width:100%;height:100%;object-fit:contain}h2.dialog-art-label{margin:0 auto 16px}
+.generated-setting{display:flex!important;align-items:center;justify-content:space-between;gap:24px;margin:14px 0!important}.generated-setting img{width:180px;height:80px;object-fit:contain}.generated-setting input{max-width:40%}
+#map-toggle.generated-control{width:140px;height:60px}
+@media(max-width:500px){.dialog-art-label{width:160px;height:75px}.generated-setting{gap:12px}.generated-setting img{width:150px;height:70px}#map-toggle.generated-control{width:100px;height:45px}}
+#cast-back.generated-control{width:110px!important;height:48px!important;z-index:4}#cast-cards .cast-card b .cast-name-art{object-fit:contain}
+@media(orientation:portrait){#cast-back.generated-control{width:84px!important;height:36px!important}#select-turn{white-space:nowrap}}
+
+/* Selection feedback and undistorted image typography. */
+#cast-cards .cast-card[aria-pressed="true"]{background:rgba(46,186,177,.30)!important;border:4px solid #7effe8!important;border-radius:16px;box-shadow:0 0 0 3px #174f56,0 0 24px 8px #7effe899,inset 0 0 32px #6dffe766!important}
+#cast-cards .cast-card[aria-pressed="true"]::after{content:'✓';position:absolute;right:8px;top:8px;display:grid;place-items:center;width:38px;height:38px;background:#075c57;color:#fff9cd;border:3px solid #a4ffee;border-radius:50%;font:900 26px Arial;z-index:2}
+#cast-cards .cast-card:focus-visible{outline:4px solid white;outline-offset:5px}
+#cast-confirm{background:#123b49!important;border-radius:18px!important;box-shadow:0 0 0 2px #c8aa65}
+#cast-confirm .fixed-label-art{object-fit:contain!important}
+#hud .portrait.second{transform:scaleX(-1)}
+@media(max-width:600px){#cast-cards .cast-card[aria-pressed="true"]{border-width:3px!important}#cast-cards .cast-card[aria-pressed="true"]::after{width:25px;height:25px;font-size:18px;right:4px;top:4px}}
+/* Transparent typography: one surface per control, never a plate on a plate. */
+#hud .portrait.second{transform:none!important}
+#skip{display:none!important}
+#cast-confirm{background:transparent!important;box-shadow:none!important;border:0!important}
+#cast-confirm .fixed-label-art{height:44%!important;width:90%!important;margin:auto;object-fit:contain!important}
+#roll img{height:52%;width:85%;margin:auto;object-fit:contain}
+#tutor{background:#f5deb0!important;border:1px solid #b9985f!important;border-radius:8px;padding:7px 14px!important;width:90px!important;height:38px!important}
+#tutor img{object-fit:contain}
+.voyage-generated .generated-button{background:#fff0d2!important;border:2px solid #b99a61!important;border-radius:10px!important;min-height:52px;height:60px!important;padding:12px 20px!important;display:flex;align-items:center;justify-content:center}
+.voyage-generated .generated-button img{width:100%;height:100%;object-fit:contain;border-radius:0}
+.voyage-generated .generated-button[aria-pressed=true]{background:#bbecda!important;outline:3px solid #fff4b2}
+#map-toggle.generated-control,#cast-back.generated-control{background:#fff0d2!important;border:1px solid #b99a61!important;border-radius:8px;padding:10px!important}
+.dialog-art-label{height:58px!important;width:210px;padding:12px 20px!important;border:2px solid #bd9b59!important;border-radius:10px;background:#fff0d2!important;vertical-align:middle;margin:10px 12px 10px 0}
+h2.dialog-art-label{height:65px!important;background:#fff0d2!important;margin:0 0 18px}
+.dialog-art-label img{object-fit:contain;max-height:30px}
+.generated-setting img{background:#fff0d2;padding:12px;box-sizing:border-box;border-radius:8px;height:60px}
+.decision-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:20px}
+.decision-grid .choice-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:132px;padding:20px;background:#fff0d2;color:#173c4d;border:2px solid #b99a61;border-radius:12px;font-size:22px;line-height:1.4;margin:0}
+.choice-card img{width:100%;max-width:200px;height:32px;object-fit:contain}.choice-card small{font-size:16px;line-height:1.5;font-weight:500}
+#voyage-explanation{padding:12px 20px;border-top:1px solid #759b9f;color:#fff3d3;font-size:17px;line-height:1.6}#voyage-explanation p{margin:3px 0}
+.voyage-generated header{gap:16px}.voyage-generated header #voyage-records{margin-left:auto}
+.guide-open{width:48px;height:48px;border:2px solid #d8bc7e;background:#fff0d2;color:#163e50;border-radius:50%;font-size:28px;font-weight:bold;cursor:pointer}
+#dialog:has(.visual-guide){width:min(1100px,96vw);max-width:96vw;max-height:94vh;box-sizing:border-box;padding:30px}
+.visual-guide h2{font-size:30px}.guide-lead{font-size:20px;line-height:1.6;color:#ffe7ae}.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}.guide-grid article{background:#fff0d2;color:#173a48;border-radius:16px;padding:20px;display:flex;gap:20px;align-items:center}.guide-grid article>img{width:150px;height:150px;object-fit:contain}.guide-grid h3{font-size:24px;margin:0 0 8px}.guide-grid p{font-size:18px;line-height:1.6;margin:0}.guide-items{background:#224e5d;border-radius:12px;padding:14px 22px;font-size:18px;line-height:1.6}.visual-guide>p{font-size:18px;line-height:1.65}
+@media(orientation:portrait){.voyage-generated{gap:14px}.voyage-generated .generated-button{min-height:44px;height:48px!important;padding:10px!important}.voyage-generated footer .generated-button{height:52px!important}#voyage-explanation{font-size:14px;padding:12px 0}.voyage-generated header .generated-button{width:120px!important}.guide-grid{grid-template-columns:1fr}.guide-grid article{padding:16px;gap:12px}.guide-grid article>img{width:110px;height:110px}.guide-grid h3{font-size:22px}.guide-grid p{font-size:17px}#dialog:has(.visual-guide){padding:22px 14px}.visual-guide h2{font-size:25px}.guide-items{font-size:17px;padding:12px}.decision-grid{grid-template-columns:1fr}.dialog-art-label{width:180px}}
+@media(orientation:landscape) and (max-height:650px){.voyage-generated{padding-top:20px;padding-bottom:20px}.voyage-generated .generated-button{height:42px!important;min-height:42px;padding:8px 12px!important}#voyage-explanation{font-size:14px}.guide-grid article{flex-direction:column}.guide-grid article>img{width:120px;height:120px}}
+/* The question is the primary content, not the generic answer instruction. */
+#problem-prompt{font-size:clamp(20px,1.55cqw,28px)!important;font-weight:750;line-height:1.5!important;color:#102f3b!important;text-align:left;word-break:keep-all;overflow-wrap:anywhere;width:100%;margin:0!important}
+#equation:empty{display:none!important}
+#game[data-word="true"] #answer-row{margin-top:10px!important}
+#equation{font-size:clamp(26px,2.1cqw,38px)!important;line-height:1.3}
+#answer::placeholder{font-size:.8em;font-weight:500;color:#52626b}
+#instruments{box-sizing:border-box}
+@media(orientation:landscape) and (min-width:1101px){#game[data-phase="calculate"] #instruments{top:69.5%!important;padding:14px 18px!important;gap:8px;max-height:29.5%;overflow:auto}#game[data-phase="calculate"] #answer-row{margin-top:7px!important}#actions{margin-top:4px}}
+@media(orientation:portrait){#problem-prompt{font-size:20px!important;line-height:1.5!important}#equation{font-size:28px!important}#game[data-phase="calculate"] #instruments{padding:14px!important;gap:8px;max-height:55%;overflow:auto}#answer-row{margin-top:8px!important}}
+@media(orientation:landscape) and (max-width:1100px){#problem-prompt{font-size:18px!important;line-height:1.4!important}#equation{font-size:24px!important}#game[data-phase="calculate"] #instruments{top:43%!important;max-height:56%;padding:10px!important;overflow:auto;gap:6px}#game[data-phase="calculate"] #keypad{height:40%}#answer-row{margin-top:6px!important}}
+.coupon-summary{cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px}.coupon-summary:focus-visible{outline:2px solid #ffe695;border-radius:4px}.coupon-award{display:flex;gap:20px;align-items:center}.coupon-award img{width:130px;height:130px;object-fit:contain}.coupon-award p{line-height:1.7}#store-coupon{background:#fff0d2;color:#173c4b;border:2px solid #b99a61;border-radius:10px;padding:12px 24px;font-size:20px}#roll:disabled{font-size:clamp(15px,1.2cqw,22px);white-space:nowrap}
+@media(max-width:500px){.coupon-award{flex-direction:column;gap:8px}.coupon-award img{width:100px;height:100px}}
+#hud .coupon-summary{pointer-events:auto;position:relative;z-index:4}#game>.plate{pointer-events:none}
+
+/* Visible inventory entry and actionable coupon cards. */
+#coupon-open{position:static;pointer-events:auto;align-self:center;justify-self:center;background:#fff0cd;color:#153b4b;border:2px solid #d9b361;border-radius:12px;padding:6px 14px;font-size:clamp(12px,1.1cqw,18px);font-weight:800;min-height:32px;cursor:pointer}
+.race-summary{gap:6px}
+.coupon-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.coupon-cards article{background:#fff1d2;color:#153b4b;border:2px solid #caa25b;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px}.coupon-cards article>img{width:100%;height:54px;object-fit:contain}.coupon-cards p{font-size:18px;line-height:1.6;margin:0}.coupon-cards button{margin-top:auto;background:#155c58;color:white;border:2px solid #cfaf68;border-radius:10px;padding:12px;font-size:18px;font-weight:750}.coupon-cards button:disabled{background:#e1d6bd;color:#5d574a;opacity:1;cursor:default}
+@media(orientation:portrait){.race-summary{grid-template-columns:auto 1fr auto}#coupon-open{grid-column:3;grid-row:1}#progress{grid-column:2;grid-row:1}.coupon-cards{grid-template-columns:1fr}.coupon-cards article>img{height:40px}.coupon-cards article{gap:8px;padding:12px}.coupon-cards p{font-size:17px}}
+
+/* Learning illustrations participate in layout instead of covering the question. */
+#game[data-phase="calculate"] #instruments{pointer-events:auto}
+#game[data-problem="grid"] #instruments{display:grid!important;grid-template-columns:minmax(0,1fr) 100px;grid-template-rows:auto auto auto auto;align-items:center;padding:12px!important;gap:8px!important}
+#game[data-problem="grid"] #problem-prompt{grid-column:1/-1;grid-row:1;font-size:clamp(18px,1.4cqw,24px)!important}
+#game[data-problem="grid"] #equation{grid-column:1;grid-row:2;font-size:clamp(20px,1.8cqw,30px)!important}
+#game[data-problem="grid"] #problem-visual{position:static!important;inset:auto!important;width:100px!important;height:100px!important;grid-column:2;grid-row:2/5;align-self:center}
+#game[data-problem="grid"] #problem-visual svg{width:100px!important;height:100px!important;margin:0}
+#game[data-problem="grid"] #answer-row{grid-column:1;grid-row:3;max-width:100%}
+#game[data-problem="grid"] #actions{grid-column:1;grid-row:4}
+#game[data-problem="grid"] #hint{grid-column:1/-1;grid-row:5;margin:0}
+#game[data-problem="line"] #problem-visual{position:static!important;width:100%!important;height:auto!important;flex-shrink:0}
+#game[data-problem="line"] #equation{display:none}
+.coupon-later{display:block;margin:24px auto 0;background:#fff1d2;color:#173747;border:2px solid #caa25b;border-radius:12px;padding:12px 24px;font-weight:800;font-size:20px}
+@media(orientation:portrait){.race-summary{grid-template-columns:1fr auto}#coupon-open{grid-column:2}#game[data-problem="grid"] #instruments{grid-template-columns:minmax(0,1fr) 90px}#game[data-problem="grid"] #problem-visual,#game[data-problem="grid"] #problem-visual svg{width:90px!important;height:90px!important}#game[data-problem="grid"] #answer{width:100%!important}#game[data-problem="grid"] #answer-row{gap:5px}#game[data-problem="grid"] #erase{flex-shrink:0}}
+
+#coupon-open{padding:0;border:0;background:transparent;width:clamp(140px,13cqw,210px);height:auto;min-height:0;line-height:0;border-radius:8px}#coupon-open img{display:block;width:100%;height:auto}.inventory-title-art{display:block;width:min(380px,90%);height:auto;margin:0 auto 20px}@media(orientation:portrait){#coupon-open{width:145px}}
+
+.coupon-later{margin:16px 0 24px;width:100%;position:sticky;top:0;z-index:2}.inventory-title-art{width:min(380px,80%);margin-top:16px}
+
+.audio-settings{display:grid;grid-template-columns:1fr 1fr;gap:18px}.audio-settings section{padding:18px;border:2px solid #caa25b;border-radius:14px;background:#fff0d2;color:#173747}.audio-settings label{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:8px 0;font-weight:750}.audio-settings input[type=checkbox]{width:28px;height:28px;accent-color:#186c68}.audio-settings input[type=range]{width:100%;height:44px;accent-color:#186c68}.reward-options{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.reward-options button{background:#fff0d2;color:#173747;padding:22px 14px;border:2px solid #caa25b;border-radius:16px;display:flex;flex-direction:column;gap:14px;min-height:170px}.reward-options b{font-size:24px}.reward-options small{font-size:18px;line-height:1.5}.finish-ready{color:#ffe78a;font-weight:900}.item-effect{position:absolute;z-index:55;inset:25% 15% 30%;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;animation:item-arrival 1.1s ease both;background:radial-gradient(ellipse,#123b4df2 20%,#123b4d00 70%);border-radius:50%}.item-effect img{height:60%;max-width:200px;object-fit:contain;filter:drop-shadow(0 0 15px #ffe7a9)}.item-effect strong{background:#123b4df0;border:2px solid #e1be73;border-radius:14px;padding:12px 20px;color:#fff2ce;font-size:clamp(18px,2cqw,32px);text-align:center}.anchor-symbol{font-size:110px;color:#ffe3a1;filter:drop-shadow(0 4px 5px #0008)}.item-effect.anchors .anchor-symbol{animation:anchor-drop .9s ease both}.item-effect.shields{box-shadow:inset 0 0 45px #73f4f5}.item-effect.boosts img{animation:sail-sweep 1s ease both}@keyframes item-arrival{0%{opacity:0;transform:scale(.8)}20%,80%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.08)}}@keyframes anchor-drop{from{transform:translateY(-100px) rotate(-35deg)}60%{transform:translateY(10px) rotate(12deg)}to{transform:translateY(0)}}@keyframes sail-sweep{from{transform:translateX(-100px)}to{transform:translateX(60px)}}@media(max-width:600px){.audio-settings,.reward-options{grid-template-columns:1fr}.reward-options button{min-height:120px;padding:14px}.item-effect{inset:25% 4% 35%}.item-effect img{max-height:140px}.coupon-cards{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){.item-effect,.item-effect img,.anchor-symbol{animation:none!important}}
+
+dialog:has(.reward-options),dialog:has(.coupon-cards){width:min(920px,94vw)}.reward-options small,.coupon-cards p{word-break:keep-all}.reward-options button{align-items:center;text-align:center}.item-effect.shields img{filter:drop-shadow(0 0 24px #91ffff)}
+
+.reduced-effect,.reduced-effect *{animation:none!important}
+
+.creator-credit{position:absolute;bottom:1.8%;left:1.5%;z-index:3;display:flex;flex-direction:column;gap:3px;padding:9px 15px;border:1px solid #d4b36d;border-radius:12px;background:#103747ed;color:#fff3d7;pointer-events:none;text-align:center;box-shadow:0 3px 12px #0005}.creator-credit span{font-size:clamp(10px,.8cqw,14px);color:#e3c785}.creator-credit strong{font-size:clamp(13px,1.05cqw,19px);font-weight:800}@media(orientation:portrait){.creator-credit{bottom:1%;left:50%;transform:translateX(-50%);width:max-content;padding:7px 16px;flex-direction:row;align-items:center;gap:8px}}@media(orientation:landscape) and (max-height:500px){.creator-credit{padding:5px 8px;bottom:1%;gap:1px}}

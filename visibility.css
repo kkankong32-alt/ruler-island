@@ -1,0 +1,43 @@
+/* HUD owns its rows; no status text shares space with race progress. */
+#hud{height:auto;min-height:11%;padding:10px 14px;display:grid;grid-template-columns:minmax(0,1fr) minmax(160px,.8fr) minmax(0,1fr);gap:16px;align-items:center;background:#123747;z-index:4}
+.hud-player{display:grid;grid-template-columns:clamp(48px,6cqw,100px) minmax(0,1fr);gap:12px;align-items:center;min-width:0}.hud-player.opponent{grid-column:3;grid-template-columns:minmax(0,1fr) clamp(48px,6cqw,100px)}
+#hud .portrait{position:static;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%}
+#hud .player-info{position:static;width:auto;text-align:left;font-size:clamp(12px,1.1cqw,22px);line-height:1.35;min-width:0}#hud .player-info.right{text-align:right}
+#hud .player-info strong{font-size:clamp(16px,1.85cqw,37px);white-space:nowrap;line-height:1.35}
+#hud .player-info small{display:flex;flex-wrap:wrap;gap:0 9px;font-size:clamp(11px,.95cqw,19px);line-height:1.4}#hud .player-info.right small{justify-content:flex-end}#hud .player-info small span{white-space:nowrap}
+.race-summary{display:flex;flex-direction:column;gap:18px;align-self:center;min-width:0}#round{position:static;width:auto;font-size:clamp(12px,1cqw,20px);line-height:1.3;padding:0;text-align:center;white-space:nowrap}
+#progress{position:relative;left:auto;top:auto;width:calc(100% - 20px);margin:0 10px 14px;height:4px}
+#menu{position:absolute;top:calc(100% + 8px);right:14px}
+#notice{top:calc(var(--hud-height,110px) + 8px);left:15%;width:70%;font-size:clamp(13px,1.4cqw,25px);line-height:1.35;padding:7px 12px;z-index:3}
+#world{top:calc(var(--hud-height,110px) + 50px);height:calc(68.5% - var(--hud-height,110px) - 50px)}
+#map-toggle{top:calc(var(--hud-height,110px) + 58px)}#skip{top:calc(var(--hud-height,110px) + 106px)}
+#keypad button{font-family:Arial,"Malgun Gothic",sans-serif;font-variant-numeric:tabular-nums}
+#keypad .key-face{display:flex;align-items:center;justify-content:center;line-height:1;position:absolute;inset:0;pointer-events:none;transform:translateY(-1px)}
+#keypad button{position:relative}#keypad[data-art-slots="true"]{display:block;gap:0}#keypad[data-art-slots="true"] button{position:absolute}
+@media(orientation:portrait){
+ #hud{padding:8px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 12px;min-height:0}
+ .hud-player{grid-template-columns:clamp(34px,9cqw,62px) minmax(0,1fr);gap:6px}.hud-player.opponent{grid-template-columns:minmax(0,1fr) clamp(34px,9cqw,62px)}
+ #hud .player-info{font-size:clamp(11px,2.8cqw,18px)}#hud .player-info strong{font-size:clamp(12px,3.3cqw,23px)}#hud .player-info small{font-size:clamp(10px,2.5cqw,15px);gap:0 6px}
+ .hud-player.opponent{grid-column:2;grid-row:1}.race-summary{grid-row:2;grid-column:1/-1;display:grid;grid-template-columns:max-content minmax(0,1fr);gap:12px;align-items:center;padding:3px 2px 7px}#round{font-size:clamp(11px,2.6cqw,16px)}#progress{margin:0 10px 0;width:calc(100% - 20px)}
+ #notice{top:calc(var(--hud-height,104px) + 6px);left:2%;width:calc(100% - 58px);font-size:clamp(12px,3.1cqw,20px);padding:7px 8px}
+ #world{top:calc(var(--hud-height,104px) + 44px);height:calc(47% - var(--hud-height,104px) - 44px)}
+ #menu{right:8px;top:calc(100% + 6px)}#map-toggle{top:calc(var(--hud-height,104px) + 50px);font-size:12px;min-height:32px}#skip{top:calc(var(--hud-height,104px) + 89px);font-size:12px;min-height:32px}
+}
+@media(orientation:landscape) and (max-width:1100px){
+ #hud{padding:5px 10px;gap:10px;grid-template-columns:1fr .75fr 1fr;min-height:0}.hud-player{grid-template-columns:42px minmax(0,1fr);gap:7px}.hud-player.opponent{grid-template-columns:minmax(0,1fr) 42px}
+ #hud .player-info{font-size:11px}#hud .player-info strong{font-size:15px}#hud .player-info small{font-size:10px;gap:0 5px}#round{font-size:11px}.race-summary{gap:14px}#progress{margin-bottom:8px}
+ #console{top:var(--hud-height,72px);height:calc(100% - var(--hud-height,72px))}#world{top:calc(var(--hud-height,72px) + 40px);height:calc(100% - var(--hud-height,72px) - 40px)}#notice{top:calc(var(--hud-height,72px) + 5px);left:1%;width:48%;font-size:12px;padding:5px}
+ #menu{right:46%;top:calc(100% + 4px)}#map-toggle{top:calc(var(--hud-height,72px) + 44px);right:46%;font-size:11px}#skip{top:calc(var(--hud-height,72px) + 82px);right:46%;font-size:11px}
+}
+
+#game::after{content:'';position:absolute;top:var(--hud-height,110px);left:0;width:100%;height:50px;background:#123747;pointer-events:none;z-index:0}#world{z-index:1}#console{z-index:2}
+@media(orientation:portrait){#game::after{height:44px}#hud .player-info{font-size:clamp(12px,3.1cqw,19px)}#hud .player-info strong{font-size:clamp(14px,3.8cqw,24px)}#hud .player-info small{font-size:clamp(11px,2.8cqw,16px)}}
+@media(orientation:landscape) and (max-width:1100px){#game::after{height:40px;width:55%}}
+
+/* Keep the entire figure above its name; selection never enlarges the sprite. */
+#cast-cards .cast-card img{position:absolute;left:8%;top:1%;width:84%;height:82%;object-fit:contain;object-position:center bottom;transform:none!important;animation:none!important}
+#cast-cards .cast-card b{bottom:0;height:14%;display:flex;align-items:center;justify-content:center;padding:0}
+#choices button{display:flex;align-items:center;justify-content:center;flex-direction:row;gap:.45em;white-space:nowrap;line-height:1;padding:0 4px;font-size:clamp(15px,1.65cqw,32px)}
+#choices small{display:inline;font-size:.64em!important;line-height:1;margin:0}
+@media(orientation:portrait){#choices button{font-size:clamp(14px,3.8cqw,24px)}}
+@media(orientation:landscape) and (max-width:1100px){#choices button{font-size:clamp(12px,1.7cqw,20px);gap:.25em}}
